@@ -11,27 +11,28 @@
 
 <ul id="spisok">
 <li>
-  <a href="https://mobimg.b-cdn.net/v3/fetch/4d/4d671cfe78cbb63a617875e1f6023157.jpeg"><img src="https://mobimg.b-cdn.net/v3/fetch/4d/4d671cfe78cbb63a617875e1f6023157.jpeg" alt="" width="100pt"></a>
+  <img src="https://mobimg.b-cdn.net/v3/fetch/4d/4d671cfe78cbb63a617875e1f6023157.jpeg" alt="" width="100pt">
 </li>
 <li>
-  <a href="https://klike.net/uploads/posts/2018-10/1539499416_1.jpg"><img src="https://klike.net/uploads/posts/2018-10/1539499416_1.jpg" alt="" width="100pt"></a>
+  <img src="https://klike.net/uploads/posts/2018-10/1539499416_1.jpg" alt="" width="100pt">
 </li>
 <li>
-  <a href="https://cdn.lifehacker.ru/wp-content/uploads/2018/12/Kak-fotografirovat-kotikov-19-sovetov-ot-professionala_1544744286.jpg"><img src="https://cdn.lifehacker.ru/wp-content/uploads/2018/12/Kak-fotografirovat-kotikov-19-sovetov-ot-professionala_1544744286.jpg" alt="" width="100pt"></a>
+ <img src="https://cdn.lifehacker.ru/wp-content/uploads/2018/12/Kak-fotografirovat-kotikov-19-sovetov-ot-professionala_1544744286.jpg" alt="" width="100pt">
 </li>
 </ul>
 <script>
    spisok.onclick = function(event) {
-      let smallImg = event.target.closest('a');
+    
+      let smallImg = event.target.closest('img');
 
       if (!smallImg) return;
-      showSmallImg(smallImg.href, smallImg.title);
-      event.preventDefault();
+      showSmallImg(smallImg.src, smallImg.title);
+      
     }
 
-    function showSmallImg(href, title) {
-      BigImg.src = href;
-    }
+    function showSmallImg(src, title) {
+      BigImg.src = src;
+    } 
 </script>
 </body>
 </html>
